@@ -1,4 +1,4 @@
-# A-User-Friendly-Software-Based-on-Legendre-Gauss-Radau-Pseudo-Spectral-Method-in-Python-to-Solve-Mod
+# A Practical Open-Source Approach to Model Predictive Control Using the Legendre-Gauss-Radau Pseudospectral Method
 This is a User-Friendly Software Based on Legendre-Gauss-Radau Pseudo Spectral Method in Python to Solve Model Predictive Control Problems
 
 Please cite the folllwing paper:
