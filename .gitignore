@@ -1,0 +1,5 @@
+#Ignore Results Folder
+**/Results/
+
+# Ignore macOS system files
+.DS_Store
