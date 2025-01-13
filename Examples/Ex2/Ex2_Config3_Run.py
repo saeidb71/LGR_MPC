@@ -80,7 +80,7 @@ if True:
                 "Init_state_boudnary_flag":1,
                 "End_state_boudnary_flag":1,
                 "plot_iter_flag":True,
-                "File_Name":os.getcwd()+'/Results/'+'Ex2_Test3',
+                "File_Name":os.getcwd()+'/results/'+'Ex2_Test3',
                 }
     
     MPC_params={
@@ -146,7 +146,7 @@ if True:
         state_dot[1]=u_interp_analytic_func(t)
         return state_dot
     
-    Result_data=Read_Result(os.getcwd()+'/Results/'+'Ex2_Test3')
+    Result_data=Read_Result(os.getcwd()+'/results/'+'Ex2_Test3')
     Result_data["Model_data"]=Model_data
     
     Ts=Result_data["MPC_params"]["Ts"]
@@ -176,7 +176,7 @@ if True:
     Exact_Result["state_sol_ode"]=state_sol_ode
     Exact_Result["u_opt_analytic"]=u_opt_analytic
     
-    file_ExactSol_addrees=os.getcwd()+'/Results/'+'Ex2_Exact'
+    file_ExactSol_addrees=os.getcwd()+'/results/'+'Ex2_Exact'
     with open(file_ExactSol_addrees,'wb') as file:
         pkl.dump(Exact_Result,file)
     
@@ -187,7 +187,7 @@ if True:
     ax_1.set_ylabel(fr'$\xi_{1}$')
     ax_1.legend(prop=fontP)
     #fig_1.suptitle('$States$')
-    #fig_1.savefig(os.path.join(os.getcwd()+'/Results/')+"scatter_Ex2_x1.pdf",format='pdf',dpi=300, bbox_inches='tight')
+    #fig_1.savefig(os.path.join(os.getcwd()+'/results/')+"scatter_Ex2_x1.pdf",format='pdf',dpi=300, bbox_inches='tight')
     
     fig_2, ax_2 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
     ax_2.plot(time_h,Result_data["I"]["s_unsc_matrix"][:,1],'-',linewidth=2,label=r'$\mathrm{MPC}\,\, ,T_s$'+f'$:{Ts}\, ,m={m}\,\, ,p={p}$')
@@ -196,7 +196,7 @@ if True:
     ax_2.set_ylabel(fr'$\xi_{2}$')
     ax_2.legend(prop=fontP)
     #fig_2.suptitle('$States$')
-    #fig_2.savefig(os.path.join(os.getcwd()+'/Results/')+"scatter_Ex2_x2.pdf",format='pdf',dpi=300, bbox_inches='tight')
+    #fig_2.savefig(os.path.join(os.getcwd()+'/results/')+"scatter_Ex2_x2.pdf",format='pdf',dpi=300, bbox_inches='tight')
     
     fig_3, ax_3 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
     ax_3.plot(time_h,Result_data["I"]["u_unsc_matrix"][:,0],'-',linewidth=2,label=r'$\mathrm{MPC}\,\, ,T_s$'+f'$:{Ts}\, ,m={m}\,\, ,p={p}$')
@@ -205,4 +205,4 @@ if True:
     ax_3.set_ylabel(fr'$u$')
     ax_3.legend(prop=fontP)
     #fig_2.suptitle('$States$')
-    #fig_3.savefig(os.path.join(os.getcwd()+'/Results/')+"scatter_Ex2_u.pdf",format='pdf',dpi=300, bbox_inches='tight')
+    #fig_3.savefig(os.path.join(os.getcwd()+'/results/')+"scatter_Ex2_u.pdf",format='pdf',dpi=300, bbox_inches='tight')

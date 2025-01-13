@@ -83,7 +83,7 @@ if True:
                 "Init_state_boudnary_flag":1,
                 "End_state_boudnary_flag":0,
                 "plot_iter_flag":True,
-                "File_Name":os.getcwd()+'/Results/'+'Ex3_Test1',
+                "File_Name":os.getcwd()+'/results/'+'Ex3_Test1',
                 }
     
     MPC_params={
@@ -151,7 +151,7 @@ if True:
         state_dot[0]=b(t)*u_interp_analytic_func(t)
         return state_dot
     
-    Result_data=Read_Result(os.getcwd()+'/Results/'+'Ex3_Test1')
+    Result_data=Read_Result(os.getcwd()+'/results/'+'Ex3_Test1')
     
     Result_data["Model_data"]=Model_data #coudl not use pickle because of b lambda function
     
@@ -182,7 +182,7 @@ if True:
     Exact_Result["state_sol_ode"]=state_sol_ode
     Exact_Result["u_opt_analytic"]=u_opt_analytic
     
-    file_ExactSol_addrees=os.getcwd()+'/Results/'+'Ex3_Exact'
+    file_ExactSol_addrees=os.getcwd()+'/results/'+'Ex3_Exact'
     with open(file_ExactSol_addrees,'wb') as file:
         pkl.dump(Exact_Result,file)
     

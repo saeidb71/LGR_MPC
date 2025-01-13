@@ -35,9 +35,9 @@ import runpy
 runpy.run_path(os.path.dirname(os.path.abspath(__file__))+"/Ex4_Config1_Run.py")
 runpy.run_path(os.path.dirname(os.path.abspath(__file__))+"/Ex4_Config2_Run.py")
 
-Result_data_Test1=Read_Result(os.getcwd()+'/Results/'+'Ex4_Test1')
-Result_data_Test2=Read_Result(os.getcwd()+'/Results/'+'Ex4_Test2')
-Exact=os.getcwd()+'/Results/'+'Ex4_Exact'
+Result_data_Test1=Read_Result(os.getcwd()+'/results/'+'Ex4_Test1')
+Result_data_Test2=Read_Result(os.getcwd()+'/results/'+'Ex4_Test2')
+Exact=os.getcwd()+'/results/'+'Ex4_Exact'
 with open(Exact,'rb') as file:
     Exact_sol=pkl.load(file)
     
@@ -64,7 +64,7 @@ ax_1.plot(time_h_2,state_sol_ode[:,0],'-',linewidth=1, label='$\mathrm{OLC}$')
 ax_1.set_xlabel('$t\,\mathrm{[s]}$')
 ax_1.set_ylabel(fr'$\xi_{1}$')
 ax_1.legend(prop=fontP)
-fig_1.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex4_x1.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_1.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex4_x1.pdf",format='pdf',dpi=300, bbox_inches='tight')
 
 
 fig_2, ax_2 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
@@ -74,7 +74,7 @@ ax_2.plot(time_h_2,state_sol_ode[:,1],'-',linewidth=1, label='$\mathrm{OLC}$')
 ax_2.set_xlabel('$t\,\mathrm{[s]}$')
 ax_2.set_ylabel(fr'$\xi_{2}$')
 ax_2.legend(prop=fontP)
-fig_2.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex4_x2.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_2.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex4_x2.pdf",format='pdf',dpi=300, bbox_inches='tight')
 
 fig_3, ax_3 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
 ax_3.plot(time_h_1,Result_data_Test1["I"]["s_unsc_matrix"][:,2],'-',linewidth=1,label=r'$\mathrm{MPC}\,\, ,T_s$'+f'$:{Ts1}\, ,m={m1}\,\, ,p={p1}$')
@@ -83,7 +83,7 @@ ax_3.plot(time_h_2,state_sol_ode[:,2],'-',linewidth=1, label='$\mathrm{OLC}$')
 ax_3.set_xlabel('$t\,\mathrm{[s]}$')
 ax_3.set_ylabel(fr'$\xi_{3}$')
 ax_3.legend(prop=fontP)
-fig_3.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex4_x3.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_3.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex4_x3.pdf",format='pdf',dpi=300, bbox_inches='tight')
 
 fig_4, ax_4 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
 ax_4.plot(time_h_1,Result_data_Test1["I"]["s_unsc_matrix"][:,3],'-',linewidth=1,label=r'$\mathrm{MPC}\,\, ,T_s$'+f'$:{Ts1}\, ,m={m1}\,\, ,p={p1}$')
@@ -92,7 +92,7 @@ ax_4.plot(time_h_2,state_sol_ode[:,3],'-',linewidth=1, label='$\mathrm{OLC}$')
 ax_4.set_xlabel('$t\,\mathrm{[s]}$')
 ax_4.set_ylabel(fr'$\xi_{4}$')
 ax_4.legend(prop=fontP)
-fig_4.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex4_x4.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_4.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex4_x4.pdf",format='pdf',dpi=300, bbox_inches='tight')
 
 
 fig_5, ax_5 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
@@ -102,4 +102,4 @@ ax_5.plot(time_h_2,u_opt_analytic,'-',linewidth=1, label='$\mathrm{OLC}$')
 ax_5.set_xlabel('$t\,\mathrm{[s]}$')
 ax_5.set_ylabel(fr'$u$')
 ax_5.legend(prop=fontP)
-fig_5.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex4_u.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_5.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex4_u.pdf",format='pdf',dpi=300, bbox_inches='tight')

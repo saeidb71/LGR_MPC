@@ -36,10 +36,10 @@ runpy.run_path(os.path.dirname(os.path.abspath(__file__))+"/Ex2_Config1_Run.py")
 runpy.run_path(os.path.dirname(os.path.abspath(__file__))+"/Ex2_Config2_Run.py")
 runpy.run_path(os.path.dirname(os.path.abspath(__file__))+"/Ex2_Config3_Run.py")
 
-Result_data_Test1=Read_Result(os.getcwd()+'/Results/'+'Ex2_Test1')
-Result_data_Test2=Read_Result(os.getcwd()+'/Results/'+'Ex2_Test2')
-Result_data_Test3=Read_Result(os.getcwd()+'/Results/'+'Ex2_Test3')
-Exact=os.getcwd()+'/Results/'+'Ex2_Exact'
+Result_data_Test1=Read_Result(os.getcwd()+'/results/'+'Ex2_Test1')
+Result_data_Test2=Read_Result(os.getcwd()+'/results/'+'Ex2_Test2')
+Result_data_Test3=Read_Result(os.getcwd()+'/results/'+'Ex2_Test3')
+Exact=os.getcwd()+'/results/'+'Ex2_Exact'
 with open(Exact,'rb') as file:
     Exact_sol=pkl.load(file)
     
@@ -71,7 +71,7 @@ ax_1.plot(time_h_3,state_sol_ode[:,0],'--',linewidth=2, label='$\mathrm{Exact}$'
 ax_1.set_xlabel('$t\,\mathrm{[s]}$')
 ax_1.set_ylabel(fr'$\xi_{1}$')
 ax_1.legend(prop=fontP)
-fig_1.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex2_x1.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_1.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex2_x1.pdf",format='pdf',dpi=300, bbox_inches='tight')
 
 fig_2, ax_2 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
 ax_2.plot(time_h_1,Result_data_Test1["I"]["s_unsc_matrix"][:,1],'-',linewidth=2,label=r'$\mathrm{MPC}\,\, ,T_s$'+f'$:{Ts1}\, ,m={m1}\,\, ,p={p1}$')
@@ -81,7 +81,7 @@ ax_2.plot(time_h_3,state_sol_ode[:,1],'--',linewidth=2, label='$\mathrm{Exact}$'
 ax_2.set_xlabel('$t\,\mathrm{[s]}$')
 ax_2.set_ylabel(fr'$\xi_{2}$')
 ax_2.legend(prop=fontP)
-fig_2.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex2_x2.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_2.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex2_x2.pdf",format='pdf',dpi=300, bbox_inches='tight')
 
 fig_3, ax_3 = plt.subplots(nrows=1, ncols=1,figsize=[6.4,4.8],dpi=200)
 ax_3.plot(time_h_1,Result_data_Test1["I"]["u_unsc_matrix"][:,0],'-',linewidth=2,label=r'$\mathrm{MPC}\,\, ,T_s$'+f'$:{Ts1}\, ,m={m1}\,\, ,p={p1}$')
@@ -91,4 +91,4 @@ ax_3.plot(time_h_3,u_opt_analytic,'--',linewidth=2, label='$\mathrm{Exact}$')
 ax_3.set_xlabel('$t\,\mathrm{[s]}$')
 ax_3.set_ylabel(fr'$u$')
 ax_3.legend(prop=fontP)
-fig_3.savefig(os.path.join(os.getcwd()+'/Results/')+"comp_Ex2_u.pdf",format='pdf',dpi=300, bbox_inches='tight')
+fig_3.savefig(os.path.join(os.getcwd()+'/results/')+"comp_Ex2_u.pdf",format='pdf',dpi=300, bbox_inches='tight')

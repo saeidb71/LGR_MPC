@@ -153,7 +153,7 @@ if True:
                 "Init_state_boudnary_flag":1,
                 "End_state_boudnary_flag":0,
                 "plot_iter_flag":False,
-                "File_Name":os.getcwd()+'/Results/'+'Ex4_Test1',
+                "File_Name":os.getcwd()+'/results/'+'Ex4_Test1',
                 }
     
     MPC_params={
@@ -199,7 +199,7 @@ if True:
     MPC_Class_Instance.Run_MPC_Loop()
     
     #-------------------Read Result---------------------
-    Result_data=Read_Result(os.getcwd()+'/Results/'+'Ex4_Test1')
+    Result_data=Read_Result(os.getcwd()+'/results/'+'Ex4_Test1')
     Result_data["Model_data"]=Model_data 
     
     Ts=Result_data["MPC_params"]["Ts"]
@@ -253,7 +253,7 @@ if True:
     Exact_Result["state_sol_ode"]=state_sol_ode
     Exact_Result["u_opt_analytic"]=u_interp_analytic_func(time_sol_ode)
     
-    file_ExactSol_addrees=os.getcwd()+'/Results/'+'Ex4_Exact'
+    file_ExactSol_addrees=os.getcwd()+'/results/'+'Ex4_Exact'
     with open(file_ExactSol_addrees,'wb') as file:
         pkl.dump(Exact_Result,file)
     
