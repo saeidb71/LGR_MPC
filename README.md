@@ -58,14 +58,11 @@ Ensure [Conda](https://docs.conda.io/en/latest/) is installed on your system.
 If you use this package in your research, please cite:
 
 ```bibtex
-@article{bayat2023ss,
-  title={SS-MPC: A user-friendly software based on single shooting optimization to solve Model Predictive Control problems},
+@article{bayat2023lgr,
+  title={LGR-MPC: A user-friendly software based on Legendre-Gauss-Radau pseudo spectral method for solving Model Predictive Control problems},
   author={Bayat, Saeid and Allison, James T},
-  journal={Software Impacts},
-  volume={17},
-  pages={100566},
-  year={2023},
-  publisher={Elsevier}
+  journal={arXiv preprint arXiv:2310.15960},
+  year={2023}
 }
 ```
 
