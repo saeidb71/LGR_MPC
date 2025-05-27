@@ -58,11 +58,13 @@ Ensure [Conda](https://docs.conda.io/en/latest/) is installed on your system.
 If you use this package in your research, please cite:
 
 ```bibtex
-@article{bayat2023lgr,
-  title={LGR-MPC: A user-friendly software based on Legendre-Gauss-Radau pseudo spectral method for solving Model Predictive Control problems},
+@article{bayat2025practical,
+  title={A practical open-source approach to Model Predictive Control using the Legendre--Gauss--Radau pseudospectral method},
   author={Bayat, Saeid and Allison, James T},
-  journal={arXiv preprint arXiv:2310.15960},
-  year={2023}
+  journal={Software Impacts},
+  pages={100769},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
 
